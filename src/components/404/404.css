@@ -1,0 +1,14 @@
+.not-found {
+   display: flex;
+   height: calc(100vh - 64px);
+
+}
+
+.not-found > div {
+   margin: auto;
+
+}
+
+.not-found i {
+   font-size: 4em;
+}
