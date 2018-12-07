@@ -15,6 +15,7 @@
     "url": "https://github.com/cstewa91/chatter-app.git"
   },
   "dependencies": {
+    "firebase": "^5.7.0",
     "materialize-css": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
