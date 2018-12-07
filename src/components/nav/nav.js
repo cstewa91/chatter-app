@@ -13,12 +13,20 @@ class Nav extends Component {
          {
             to: '/chat',
             text: 'Chat'
+         },
+         {
+            to: '/set-name',
+            text: 'Set Name'
          }
       ]
    }
    componentDidMount() {
-      console.log(this.sideNav)
-      M.Sidenav.init(this.sideNav)
+      this.sideNav = M.Sidenav.init(this.sideNav)
+   }
+   handleLinkClick = () => {
+      if(this.sideNav.isOpen){
+         this.sideNav.close();
+      }
    }
    setSideNavRef = (element) => {
       this.sideNav = element
@@ -26,7 +34,7 @@ class Nav extends Component {
    render() {
       const linkElements = this.state.links.map(link => {
          return (
-            <li key={link.to}>
+            <li onClick={this.handleLinkClick} key={link.to}>
                <Link to={link.to}>{link.text}</Link>
             </li>
          )

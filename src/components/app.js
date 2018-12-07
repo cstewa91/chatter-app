@@ -6,6 +6,7 @@ import Nav from './nav';
 import Home from './home';
 import Chat from './chat';
 import NotFound from './404';
+import SetName from './set_name'
 
 const App = () => (
     <div>
@@ -14,6 +15,7 @@ const App = () => (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/chat" component={Chat} />
+                <Route path="/set-name" component={SetName} />
                 <Route component={NotFound} />
             </Switch>
         </div>
